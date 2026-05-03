@@ -453,7 +453,7 @@ function renderProduct(slug) {
 
       <div class="pd-actions">
         <button class="btn btn-primary btn-lg pd-buy-now" onclick="addToCart('${p.slug}'); openCart();">Buy Now</button>
-        <a href="https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Hi, I\'m interested in the ' + p.name + ' (SKU: ' + p.sku + ')')}" target="_blank" rel="noopener" class="btn btn-whatsapp">💬 Chat on WhatsApp</a>
+        <button class="btn btn-secondary btn-lg" onclick="addToCart('${p.slug}');">🛒 Add to Cart</button>
       </div>
 
       <div class="pd-help-card">
@@ -927,15 +927,15 @@ function exitScan() {
 // On scan page load, after delay, route to product
 function handleScanFlow() {
   if (parseRoute().type === 'scan') {
-    // Update status text after 1.5s
+    // Update status text after 3.5s
     setTimeout(() => {
       const statusText = document.getElementById('scanStatusText');
       if (statusText) statusText.textContent = '✓ Detected — opening product page';
-    }, 1500);
-    // Navigate to product after 2.5s
+    }, 3500);
+    // Navigate to product after 5s
     setTimeout(() => {
       window.location.hash = '#/product/lf280k-3v2-280ah';
-    }, 2500);
+    }, 5000);
   }
 }
 

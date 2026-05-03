@@ -387,7 +387,7 @@ const CATEGORIES = [
 ];
 
 const TEAM = [
-  { name: 'Lucky Ovwasa', role: 'CO-FOUNDER & CEO', avatar: '👨🏾' },
+  { name: 'Uche Shedrach', role: 'FOUNDER & CEO', avatar: '👨🏾' },
   { name: 'Adaeze Nwosu', role: 'HEAD OF OPERATIONS', avatar: '👩🏾' },
   { name: 'Tunde Adebayo', role: 'LEAD INSTALLER', avatar: '👨🏾‍🔧' },
   { name: 'Kemi Falade', role: 'CUSTOMER SUCCESS', avatar: '👩🏾‍💼' }
