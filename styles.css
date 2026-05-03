@@ -258,6 +258,8 @@ img { max-width: 100%; display: block; }
   position: sticky; top: 0; z-index: 100;
   background: white;
   border-bottom: 1px solid var(--color-border);
+}
+.header-inner {
   display: flex; align-items: center; justify-content: space-between;
   padding: 16px 20px;
   gap: 12px;
@@ -944,8 +946,10 @@ main { flex: 1; }
 .footer {
   background: #0B1226;
   color: white;
-  padding: 40px 20px 32px;
   margin-top: auto;
+}
+.footer-inner {
+  padding: 40px 20px 32px;
 }
 .footer-grid { display: grid; gap: 24px; }
 .footer-col strong { display: block; font-size: 18px; }
@@ -1333,7 +1337,7 @@ main { flex: 1; }
    RESPONSIVE — DESKTOP
 ═══════════════════════════════════════════════ */
 @media (min-width: 768px) {
-  .header { padding: 20px 40px; }
+  .header-inner { padding: 20px 40px; }
   .nav-desktop { display: flex; }
   .menu-btn { display: none; }
   .cart-label { display: inline; }
@@ -1355,12 +1359,19 @@ main { flex: 1; }
   .why-grid { grid-template-columns: repeat(4, 1fr); }
   .why-card { flex-direction: column; padding: 24px; }
 
-  .product-detail-hero { max-height: 480px; aspect-ratio: 16/9; }
-  .product-detail-body { padding: 32px 40px 60px; }
+  .product-detail-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+    padding-top: 40px;
+  }
+  .product-detail-hero { max-height: 600px; aspect-ratio: 1; border-radius: var(--radius-lg); overflow: hidden; }
+  .product-detail-body { padding: 0 0 60px; }
 
   .pd-name { font-size: 36px; }
 
-  .footer { padding: 60px 40px 32px; }
+  .footer-inner { padding: 60px 40px 32px; }
   .footer-grid { grid-template-columns: 2fr 1fr 1fr 1fr; gap: 60px; }
 
   .mv-grid { grid-template-columns: 1fr 1fr; }

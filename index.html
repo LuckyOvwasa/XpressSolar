@@ -68,27 +68,29 @@
 
     <!-- HEADER -->
     <header class="header">
-      <a href="#/" class="logo" data-route="home">
-        <div class="logo-mark">☀</div>
-        <div class="brand">
-          <strong>Xpress Solar</strong>
-          <small>Powering Nigeria</small>
+      <div class="header-inner container">
+        <a href="#/" class="logo" data-route="home">
+          <div class="logo-mark">☀</div>
+          <div class="brand">
+            <strong>Xpress Solar</strong>
+            <small>Powering Nigeria</small>
+          </div>
+        </a>
+        <nav class="nav-desktop">
+          <a href="#/" data-route="home" class="nav-link active">Home</a>
+          <a href="#/shop" data-route="shop" class="nav-link">Shop</a>
+          <a href="#/about" data-route="about" class="nav-link">About</a>
+          <a href="#/faq" data-route="faq" class="nav-link">FAQ</a>
+        </nav>
+        <div class="header-actions">
+          <button class="cart-btn" onclick="openCart()" aria-label="Cart">
+            <span class="cart-icon">🛒</span>
+            <span class="cart-label">Cart</span>
+            <span class="cart-badge" id="cartBadge">0</span>
+          </button>
+          <a href="https://wa.me/2348068755564" target="_blank" rel="noopener" class="btn btn-primary btn-sm header-cta">Get Free Quote</a>
+          <button class="menu-btn" onclick="toggleMenu()" aria-label="Menu" id="menuBtn">☰</button>
         </div>
-      </a>
-      <nav class="nav-desktop">
-        <a href="#/" data-route="home" class="nav-link active">Home</a>
-        <a href="#/shop" data-route="shop" class="nav-link">Shop</a>
-        <a href="#/about" data-route="about" class="nav-link">About</a>
-        <a href="#/faq" data-route="faq" class="nav-link">FAQ</a>
-      </nav>
-      <div class="header-actions">
-        <button class="cart-btn" onclick="openCart()" aria-label="Cart">
-          <span class="cart-icon">🛒</span>
-          <span class="cart-label">Cart</span>
-          <span class="cart-badge" id="cartBadge">0</span>
-        </button>
-        <a href="https://wa.me/2348068755564" target="_blank" rel="noopener" class="btn btn-primary btn-sm header-cta">Get Free Quote</a>
-        <button class="menu-btn" onclick="toggleMenu()" aria-label="Menu" id="menuBtn">☰</button>
       </div>
     </header>
 
@@ -126,37 +128,39 @@
 
     <!-- FOOTER -->
     <footer class="footer">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <div class="logo footer-logo">
-            <div class="logo-mark">☀</div>
-            <strong>Xpress Solar</strong>
+      <div class="footer-inner container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <div class="logo footer-logo">
+              <div class="logo-mark">☀</div>
+              <strong>Xpress Solar</strong>
+            </div>
+            <p class="footer-desc">Powering homes and businesses across Nigeria with reliable solar energy since 2020.</p>
           </div>
-          <p class="footer-desc">Powering homes and businesses across Nigeria with reliable solar energy since 2020.</p>
+          <div class="footer-col">
+            <h5>SHOP</h5>
+            <a href="#/shop">Solar Batteries</a>
+            <a href="#/shop">Inverters</a>
+            <a href="#/shop">Solar Panels</a>
+            <a href="#/shop">Accessories</a>
+          </div>
+          <div class="footer-col">
+            <h5>COMPANY</h5>
+            <a href="#/about">About Us</a>
+            <a href="#/faq">FAQ</a>
+            <a href="https://wa.me/2348068755564">Contact</a>
+          </div>
+          <div class="footer-col">
+            <h5>CONTACT</h5>
+            <a href="tel:+2348068755564">📞 +234 806 875 5564</a>
+            <a href="mailto:hello@xpresssolar.com">✉ hello@xpresssolar.com</a>
+            <span>📍 Lagos, Nigeria</span>
+          </div>
         </div>
-        <div class="footer-col">
-          <h5>SHOP</h5>
-          <a href="#/shop">Solar Batteries</a>
-          <a href="#/shop">Inverters</a>
-          <a href="#/shop">Solar Panels</a>
-          <a href="#/shop">Accessories</a>
+        <div class="footer-bottom">
+          <span>© 2026 Xpress Solar. All rights reserved.</span>
+          <span>Privacy · Terms</span>
         </div>
-        <div class="footer-col">
-          <h5>COMPANY</h5>
-          <a href="#/about">About Us</a>
-          <a href="#/faq">FAQ</a>
-          <a href="https://wa.me/2348068755564">Contact</a>
-        </div>
-        <div class="footer-col">
-          <h5>CONTACT</h5>
-          <a href="tel:+2348068755564">📞 +234 806 875 5564</a>
-          <a href="mailto:hello@xpresssolar.com">✉ hello@xpresssolar.com</a>
-          <span>📍 Lagos, Nigeria</span>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>© 2026 Xpress Solar. All rights reserved.</span>
-        <span>Privacy · Terms</span>
       </div>
     </footer>
   </div>

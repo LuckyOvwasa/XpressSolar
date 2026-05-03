@@ -376,9 +376,10 @@ function renderProduct(slug) {
   if (!p) return `<div class="container" style="padding:80px 20px;text-align:center;"><h2>Product not found</h2><p style="margin-top:12px;color:var(--color-text-muted);">This product doesn't exist or has been removed.</p><a href="#/shop" class="btn btn-primary" style="margin-top:24px;">Browse Shop</a></div>`;
 
   return `
-    <div class="product-detail-hero">${p.image}</div>
-    <div class="product-detail-body">
-      <div class="pd-title-block">
+    <div class="product-detail-wrapper container">
+      <div class="product-detail-hero">${p.image}</div>
+      <div class="product-detail-body">
+        <div class="pd-title-block">
         <div class="pd-brand-line">
           <span class="pd-brand">${p.brand.toUpperCase()}</span>
           <span class="pd-sep"></span>
@@ -467,6 +468,7 @@ function renderProduct(slug) {
         <span class="copy">© 2026 Xpress Solar · xpresssolar.com</span>
       </div>
     </div>
+    </div>
   `;
 }
 
@@ -547,20 +549,22 @@ function renderFAQ() {
       <p>Got questions? We have answers. Find what you need below.</p>
     </section>
 
-    <div class="faq-tabs">
-      ${cats.map(c => `<button class="faq-tab ${c===faqCategory?'active':''}" onclick="setFaqCategory('${c}')">${c}</button>`).join('')}
-    </div>
+    <div class="faq-container container">
+      <div class="faq-tabs">
+        ${cats.map(c => `<button class="faq-tab ${c===faqCategory?'active':''}" onclick="setFaqCategory('${c}')">${c}</button>`).join('')}
+      </div>
 
-    <div class="faq-list">
-      ${filtered.map((f, i) => `
-        <div class="faq-item ${i===0?'open':''}" id="faq-${i}">
-          <div class="faq-question" onclick="toggleFaq(${i})">
-            <strong>${f.q}</strong>
-            <span class="faq-toggle">${i===0?'−':'+'}</span>
+      <div class="faq-list">
+        ${filtered.map((f, i) => `
+          <div class="faq-item ${i===0?'open':''}" id="faq-${i}">
+            <div class="faq-question" onclick="toggleFaq(${i})">
+              <strong>${f.q}</strong>
+              <span class="faq-toggle">${i===0?'−':'+'}</span>
+            </div>
+            <div class="faq-answer">${f.a}</div>
           </div>
-          <div class="faq-answer">${f.a}</div>
-        </div>
-      `).join('')}
+        `).join('')}
+      </div>
     </div>
 
     <section class="final-cta">
